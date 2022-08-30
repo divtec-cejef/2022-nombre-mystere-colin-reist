@@ -39,5 +39,5 @@
         }
         nbessaie++;
     } while(!controle);
-    window.alert(`Félicitation tu as trouvé en ${nbessaie} et c'était le nombre ${nbMystere}`);
+    window.alert(`Félicitation tu as trouvé en ${nbessaie} fois et c'était le nombre ${nbMystere}`);
 }()); // main IIFE
