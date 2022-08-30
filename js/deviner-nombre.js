@@ -9,8 +9,8 @@
 (function main() {
     'use strict';
 
-    const valMin = 1;
-    const valMax = 100;
+    const VALMIN = 1;
+    const VALMAX = 100;
 
     /**
      * Retourne un nombre entier aléatoire compris entre min et max
@@ -22,22 +22,21 @@
         return Math.floor(Math.random() * (max - min) + min);
     }
 
-    let nbMystere = tireNombre(valMin, valMax);
+    let nbMystere = tireNombre(VALMIN, VALMAX);
     console.log(nbMystere);
 
     let nbessaie = 0;
-    let controle = false;
+    let texte = 'le nombre est entre 1 et 100';
+    let valUtilisateur = 0;
     do {
-        let valUtilisateur = prompt('le nombre est entre 1 et 100');
+         valUtilisateur = Number(prompt(texte));
 
         if (valUtilisateur < nbMystere) {
-            window.alert('plus grand');
-        } else if (valUtilisateur > nbMystere) {
-            window.alert('plus petit');
+            texte = 'plus grand';
         } else {
-            controle = true;
+            texte = 'plus petit';
         }
         nbessaie++;
-    } while(!controle);
+    } while(valUtilisateur !== nbMystere);
     window.alert(`Félicitation tu as trouvé en ${nbessaie} fois et c'était le nombre ${nbMystere}`);
 }()); // main IIFE
