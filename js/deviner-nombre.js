@@ -25,7 +25,7 @@
     let nbMystere = tireNombre(VALMIN, VALMAX);
     console.log(nbMystere);
 
-    let nbessaie = 0;
+    let nbEssaie = 0;
     let texte = 'le nombre est entre 1 et 100';
     let valUtilisateur = 0;
     do {
@@ -36,7 +36,7 @@
         } else {
             texte = 'plus petit';
         }
-        nbessaie++;
+        nbEssaie += 1;
     } while(valUtilisateur !== nbMystere);
-    window.alert(`Félicitation tu as trouvé en ${nbessaie} fois et c'était le nombre ${nbMystere}`);
+    window.alert(`Félicitation tu as trouvé en ${nbEssaie} fois et c'était le nombre ${nbMystere}`);
 }()); // main IIFE
